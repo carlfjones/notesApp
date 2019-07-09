@@ -12,5 +12,13 @@ function testingPushingNoteToNoteList() {
   assert.isTrue(noteList.notes[0] === note);
 }
 
+function testingShowNotes() {
+  var noteList = new NoteList();
+  var note = new Note;
+  noteList.addNote(note);
+  assert.isTrue(noteList.showNotes()[0] === note);
+}
+
 testingNoteList();
 testingPushingNoteToNoteList();
+testingShowNotes();
