@@ -9,3 +9,7 @@ NoteList.prototype.addNote = function (note) {
 NoteList.prototype.showNotes = function () {
   return this.notes;
 };
+
+NoteList.prototype.createAndStore = function (text) {
+  
+};
