@@ -11,5 +11,6 @@ NoteList.prototype.showNotes = function () {
 };
 
 NoteList.prototype.createAndStore = function (text) {
-  
+  var note = new Note(text);
+  this.addNote(note);
 };
