@@ -3,4 +3,14 @@ function testingNoteList() {
   assert.isTrue(noteList.notes = []);
 };
 
+function testingPushingNoteToNoteList() {
+  var noteList = new NoteList();
+  var note = new Note;
+
+  noteList.addNote(note);
+
+  assert.isTrue(noteList.notes[0] === note);
+}
+
 testingNoteList();
+testingPushingNoteToNoteList();
