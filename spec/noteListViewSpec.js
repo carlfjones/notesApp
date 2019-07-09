@@ -4,12 +4,22 @@ function testingNoteListView() {
   assert.isTrue(noteListView.list === noteList);
 };
 
-function testingNoteListViewDisplay() {
+function testingEmptyNoteListViewDisplay() {
   var noteList = new NoteList();
   var noteListView =  new NoteListView(noteList);
-  console.log(noteListView.display());
+
   assert.isTrue(noteListView.display() === `<ul></ul>`)
 };
 
+function testingNoteListViewDisplayWithSingleNote() {
+  var noteList = new NoteList();
+  noteList.createAndStore("test note")
+
+  var noteListView =  new NoteListView(noteList);
+
+  assert.isTrue(noteListView.display() === `<ul><li><div>test note</div></li></ul>`)
+};
+
 testingNoteListView();
-testingNoteListViewDisplay();
+testingEmptyNoteListViewDisplay();
+testingNoteListViewDisplayWithSingleNote();
