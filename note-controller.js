@@ -1,10 +1,6 @@
 function runApp() {
-  var app = document.getElementById('app');
-  console.log("WATTUPPPPPP");
-  console.log(app);
+  var app = document.getElementById("app");
   app.innerHTML = "Howdy";
 };
 
-
-console.log("hey");
 runApp();
