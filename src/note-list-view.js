@@ -7,7 +7,8 @@
     if (this.list.notes.length === 0) {
       var htmlString = `<ul></ul>`
     } else {
-      var htmlString = `<ul><li><div>${this.list.showNotes().map(note => note.content()).join(`</div></li><li><div>`)}</div></li></ul>`
+      var notes = this.list.showNotes().map(note => note.content()).join(`</div></li><li><div>`)
+      var htmlString = `<ul><li><div>${notes}</div></li></ul>`
     }
     return htmlString;
   };
