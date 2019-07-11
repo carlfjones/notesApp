@@ -1,12 +1,12 @@
 (function(exports) {
   function NoteController() {
-    var noteList = new NoteList();
-    var noteListView = new NoteListView(noteList)
-    noteList.createAndStore("Favourite drink: Irn-Bru");
+    this.noteList = new NoteList();
+    this.noteList.createAndStore("Favourite drink: Irn-Bru");
+    this.noteListView = new NoteListView(this.noteList)
   };
 
   NoteController.prototype.displayOnPage = function () {
-    var note = noteListView.display();
+    var note = this.noteListView.display();
     var app = document.getElementById("app");
     app.innerHTML = note;
   };
@@ -15,10 +15,5 @@
 })(this);
 
 var list = new NoteList();
-var listView = new NoteController(list);
-console.log("hello3");
-console.log(list);
-console.log("hello4");
-console.log(listView);
-console.log("hello5");
-listView.displayOnPage();
+var noteController = new NoteController(list);
+noteController.displayOnPage();
