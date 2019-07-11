@@ -3,16 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>NoTeS</title>
+    <!-- model files -->
+    <script src="./src/note-list-view.js"></script>
+    <script src="./src/note-list-model.js"></script>
+    <script src="./src/note-model.js"></script>
+
+    <!-- test framework -->
+    <script src="./spec/assert.js"></script>
+
+    <!-- spec files -->
+    <script src="./spec/noteSpec.js"></script>
+    <script src="./spec/noteListSpec.js"></script>
+    <script src="./spec/noteListViewSpec.js"></script>
+
+
 
   </head>
   <body>
     <div id="app">
       hello
     </div>
-    <script src="./src/note-list-view.js"></script>
-    <script src="./src/note-list-model.js"></script>
-    <script src="./src/note-model.js"></script>
+
+    <!-- note controller  -->
     <script src="note-controller.js"></script>
+    <script src="./spec/noteControllerSpec.js"></script>
 
   </body>
 </html>
